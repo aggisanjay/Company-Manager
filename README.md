@@ -181,6 +181,27 @@ npm test
 
 ---
 
+## ⚠️ Known Limitations
+
+1. **Unauthenticated Public Access**: The application currently operates in open-access mode without an authentication (AuthN) or Role-Based Access Control (RBAC) layer. Any client connecting to the API can perform CRUD operations.
+2. **Pattern-Based Text Search**: Company search utilizes PostgreSQL `ILIKE` via Prisma's `mode: 'insensitive'`. While fast for thousands of rows, enterprise datasets with millions of records would benefit from PostgreSQL Full-Text Search (`tsvector` + GIN indexing) or a dedicated search engine (e.g., Meilisearch, Algolia).
+3. **Synchronous Metric Aggregation**: Portfolio metrics (total companies, total workforce, average team size, and top industry sector) are calculated dynamically per request. At massive scale, these should be cached using Redis or database Materialized Views with periodic refresh.
+4. **Syntax-Level URL Validation**: Website URLs are validated for RFC formatting and automatically normalized with `https://`, but external network DNS reachability (checking if the domain is actively alive) is not checked synchronously on submission to avoid latency.
+
+---
+
+## 🔮 Future Improvements
+
+- [ ] **Authentication & RBAC**: Integrate Supabase Auth or NextAuth.js with JWT session guards to restrict create, edit, and delete actions to verified administrators.
+- [ ] **CSV / Excel Bulk Import & Export**: Support one-click bulk onboarding of company records via CSV/XLSX file upload and export to spreadsheets.
+- [ ] **Automatic Brand Logo & Data Enrichment**: Integrate Clearbit Logo API or Google Favicon API to automatically display official company logos and fetch public headcount estimates.
+- [ ] **Advanced Multi-Dimensional Filtering**: Add multi-select checkboxes for industries and employee range buckets (e.g., *1–50*, *51–200*, *201–1,000*, *1,000+*).
+- [ ] **Activity Audit Logging & History**: Track revision histories for every company profile (e.g., who edited the employee count, previous values, and change timestamps).
+- [ ] **Client Caching & Optimistic UI**: Integrate TanStack React Query or SWR for instant optimistic mutations and background stale-while-revalidate data fetching.
+- [ ] **Dark / Light Mode Toggle**: Provide a user preference switch between dark glassmorphism and clean enterprise light themes.
+
+---
+
 ## 🌐 Deployment Guide
 
 - **Frontend (Vercel)**:
@@ -193,3 +214,4 @@ npm test
   - Build command: `npm install && npx prisma generate && npm run build`
   - Start command: `npm run start:prod`
   - Environment variables: `DATABASE_URL`, `DIRECT_URL`, `PORT=4000`, `FRONTEND_URL=<YOUR_VERCEL_FRONTEND_URL>`
+
