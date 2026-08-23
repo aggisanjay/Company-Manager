@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Company {
+  id            String   @id @default(uuid())
+  companyName   String   @map("company_name")
+  website       String?  @map("website")
+  industry      String?  @map("industry")
+  employeeCount Int?     @map("employee_count")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @default(now()) @updatedAt @map("updated_at")
+
+  @@map("companies")
+}
