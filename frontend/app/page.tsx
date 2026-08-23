@@ -360,7 +360,7 @@ function DashboardContent() {
                   ? 'Employees'
                   : sortBy === 'industry'
                   ? 'Industry'
-                  : 'Date Added'}
+                  : 'Created At'}
               </span>{' '}
               ({order.toUpperCase()})
             </span>

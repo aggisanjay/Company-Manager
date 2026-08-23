@@ -109,7 +109,7 @@ export function CompanyTable({
                   className="group inline-flex items-center gap-2 hover:text-slate-200 transition-colors focus:outline-none ml-auto"
                 >
                   <Calendar className="w-3.5 h-3.5 text-slate-500" />
-                  <span>Added</span>
+                  <span>Created At</span>
                   {renderSortIcon('createdAt')}
                 </button>
               </th>
