@@ -140,16 +140,16 @@ export function PaginationControls({
                   e.preventDefault();
                   if (p !== page) onPageChange(p);
                 }}
-                className={`min-w-[32px] h-8 text-xs font-semibold rounded-lg transition-all ${
+                className={`min-w-[34px] h-8 text-xs font-semibold rounded-lg border transition-all flex items-center justify-center ${
                   p === page
-                    ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20 font-bold'
-                    : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/80 disabled:opacity-50'
+                    ? 'bg-emerald-500 text-slate-950 border-emerald-400 shadow-md shadow-emerald-500/20 font-bold'
+                    : 'border-slate-700/80 bg-slate-900/60 text-slate-300 hover:text-white hover:bg-slate-800 hover:border-slate-600 disabled:opacity-50'
                 }`}
               >
                 {p}
               </button>
             ) : (
-              <span key={idx} className="px-1 text-slate-600 select-none">
+              <span key={idx} className="min-w-[24px] h-8 flex items-center justify-center text-slate-500 select-none">
                 {p}
               </span>
             ),

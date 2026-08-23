@@ -116,7 +116,7 @@ export function CompanyTable({
 
               {/* Actions */}
               <th className="py-3.5 px-4 sm:px-6 text-right">
-                <span className="sr-only">Actions</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Actions</span>
               </th>
             </tr>
           </thead>
