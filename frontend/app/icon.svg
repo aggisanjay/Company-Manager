@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Rounded Shield -->
+  <rect width="32" height="32" rx="8" fill="#090d16" />
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="url(#brandGradient)" stroke-width="1.5" />
+  
+  <!-- Main Building Outline -->
+  <path d="M7 25V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" fill="none" stroke="#10b981" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Side Annexe Building -->
+  <path d="M19 14h4a2 2 0 0 1 2 2v9" fill="none" stroke="#2dd4bf" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Windows -->
+  <path d="M11 11h2" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M15 11h0.01" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M11 15h2" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M15 15h0.01" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M11 19h2" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M15 19h0.01" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M22 18h0.01" stroke="#2dd4bf" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M22 21h0.01" stroke="#2dd4bf" stroke-width="1.75" stroke-linecap="round"/>
+  
+  <!-- Door / Ground -->
+  <path d="M5 25h22" stroke="#10b981" stroke-width="1.75" stroke-linecap="round"/>
+</svg>

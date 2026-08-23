@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: 'Company Manager — Enterprise Directory & Portfolio Intelligence',
   description:
     'A high-performance company directory and management dashboard built with NestJS, Prisma, Supabase Postgres, and Next.js.',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
