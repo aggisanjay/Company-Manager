@@ -30,7 +30,7 @@ function DashboardContent() {
 
   // State: Query Controls
   const [page, setPage] = useState<number>(1);
-  const [limit, setLimit] = useState<number>(7);
+  const [limit, setLimit] = useState<number>(10);
   const [search, setSearch] = useState<string>('');
   const [sortBy, setSortBy] = useState<SortByField>('createdAt');
   const [order, setOrder] = useState<SortOrder>('desc');
@@ -40,7 +40,7 @@ function DashboardContent() {
   const [meta, setMeta] = useState<PaginationMeta>({
     total: 0,
     page: 1,
-    limit: 7,
+    limit: 10,
     totalPages: 1,
     hasNextPage: false,
     hasPrevPage: false,

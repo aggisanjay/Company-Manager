@@ -36,13 +36,13 @@ export class CompaniesService {
     const {
       search,
       page = 1,
-      limit = 7,
+      limit = 10,
       sortBy = SortByField.CREATED_AT,
       order = SortOrder.DESC,
     } = query;
 
     const numericPage = Math.max(1, Number(page) || 1);
-    const numericLimit = Math.max(1, Math.min(100, Number(limit) || 7));
+    const numericLimit = Math.max(1, Math.min(100, Number(limit) || 10));
     const skip = (numericPage - 1) * numericLimit;
     const take = numericLimit;
 

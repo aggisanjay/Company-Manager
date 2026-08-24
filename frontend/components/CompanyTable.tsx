@@ -124,7 +124,7 @@ export function CompanyTable({
           <tbody className={`divide-y divide-slate-800/60 text-sm transition-opacity duration-200 ${isLoading && companies.length > 0 ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
             {isLoading && companies.length === 0 ? (
               // Loading Skeleton Rows
-              Array.from({ length: 7 }).map((_, idx) => (
+              Array.from({ length: 10 }).map((_, idx) => (
                 <tr key={idx} className="animate-pulse">
                   <td className="py-4 px-4 sm:px-6">
                     <div className="h-4 bg-slate-800 rounded w-36 mb-1.5" />

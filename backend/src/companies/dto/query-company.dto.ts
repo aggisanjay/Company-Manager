@@ -37,7 +37,7 @@ export class QueryCompanyDto {
 
   @ApiPropertyOptional({
     description: 'Items per page',
-    default: 7,
+    default: 10,
     minimum: 1,
     maximum: 100,
   })
@@ -46,7 +46,7 @@ export class QueryCompanyDto {
   @IsInt({ message: 'Limit must be an integer' })
   @Min(1, { message: 'Limit must be at least 1' })
   @Max(100, { message: 'Limit cannot exceed 100' })
-  limit: number = 7;
+  limit: number = 10;
 
   @ApiPropertyOptional({
     description: 'Field to sort by',

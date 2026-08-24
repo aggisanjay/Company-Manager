@@ -24,7 +24,7 @@ export function PaginationControls({
 }: PaginationControlsProps) {
   const { totalPages, total } = meta;
   const page = Math.max(1, currentPage);
-  const limit = currentLimit || meta.limit || 7;
+  const limit = currentLimit || meta.limit || 10;
 
   const startItem = total === 0 ? 0 : (page - 1) * limit + 1;
   const endItem = Math.min(page * limit, total);
@@ -88,7 +88,6 @@ export function PaginationControls({
               aria-label="Items per page"
               className="bg-slate-900 border border-slate-700/80 rounded-lg px-2 py-1 text-xs text-slate-200 focus:outline-none focus:border-emerald-500 disabled:opacity-50"
             >
-              <option value={7}>7</option>
               <option value={10}>10</option>
               <option value={20}>20</option>
               <option value={50}>50</option>
