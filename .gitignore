@@ -20,11 +20,8 @@ out/
 .turbo/
 
 # Environment Variables & Secrets (Keep .env.example safe)
-.env
-.env.*
 !.env.example
 *.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -46,7 +43,6 @@ coverage/
 
 # IDE & Editor Folders
 .idea/
-.vscode/
 *.suo
 *.ntvs*
 *.njsproj
@@ -68,3 +64,7 @@ scratch/
 tmp/
 temp/
 *.tmp
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
