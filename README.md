@@ -8,7 +8,7 @@ A high-performance, full-stack company directory and portfolio management platfo
 
 - **Enterprise CRUD Operations**: Create, view, update, and delete company records with full validation.
 - **Robust Form & DTO Validation**: Dual-layer validation using `class-validator` & `class-transformer` on NestJS and client-side form feedback.
-- **Server-Side Pagination & Sorting**: High-efficiency paginated queries with customizable page sizes (5, 10, 25, 50) and multi-column sorting (Name, Industry, Employee Count, Added Date).
+- **Server-Side Pagination & Sorting**: High-efficiency paginated queries with customizable page sizes (10,20) and multi-column sorting (Name, Industry, Employee Count, Added Date).
 - **Case-Insensitive Search**: Fast debounced search matching company name and industry using Prisma's `mode: 'insensitive'`.
 - **Portfolio Analytics Overview**: Aggregated metrics on total organizations, workforce volume, and top industry sectors.
 - **Interactive UI / UX**: Modern dark-themed dashboard with glassmorphism panels, toast notifications, responsive mobile drawers, and confirmation modals.
